@@ -1,0 +1,23 @@
+DB FEEDBACK
+
+1.) The schema looks as if you want to allow multiple addresses for an Employee? just making sure? (screenshots do not reflect this) What is the EmpAddressID in the Employee table?
+
+2.) PurchaseOrder should be split into PurchaseOrder and PurchaseOrderItems. That way when you add multiple items to the PurchaseOrder you are not repeating the PurchaseOrderID and OrderDate for every item. Also, a quantity field would need to be added to this PurchaseOrderItems table.
+
+3.) I don't remember seeing Customer Discount in the requirements document? How/where is this discount applied?
+
+4.) Will returns go in the PurchaseOrder table?
+
+5.) Why AddressEmp and AddressCust? Same fields, could be one table.
+
+
+
+/////////////////////////TO FIX\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+1.) Combine cust addy and employee addy
+2.) Multiple items on a PO
+3.) Cancel order? bool field for canceled and partially canceled items?
+	Antoher table to handle....isreturned? 
+
+/////////////////////////TO REMOVE\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+3.) Remove cust discount
